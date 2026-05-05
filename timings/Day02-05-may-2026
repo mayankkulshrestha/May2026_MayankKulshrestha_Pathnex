@@ -1,0 +1,18 @@
+Linux commands(3hr)
+	chmod
+	chown
+	grep 
+		gerp with -i (ignores the case sensitive)
+		gerp with -v (it will give result that doesnot match it what we typed/searched)
+	pipeline
+	ps
+	ps aux
+	top-load average (giving 1min,5min,15min)
+	kill with -9 with ps name
+	tar
+	zip
+	export
+	ifconfig
+configure aws cli through local(1hr)
+Tried terraform code(1hr)
+how to create ec2 instance from terraform code(1hr)
