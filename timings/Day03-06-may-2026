@@ -1,0 +1,14 @@
+Youtube video(3hr)
+practice git(3.5hr)
+git init 
+working area
+staging area(add .)
+git status
+how to commit(git commit -m "my change")
+git config --list 
+git config user.name or git config user.email
+git remote add origin "link of repo"
+git push -u origin main
+to create branch (git branch branchname)
+how to switch branch(git checkout branchname)
+to create & switch at same time(git checkout -b branchname)
