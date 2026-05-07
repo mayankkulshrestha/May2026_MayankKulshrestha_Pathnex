@@ -1,4 +1,8 @@
 cloud vs onprime
+Iaas,Paas,Saas
+Iaas- renting infra(ec2)
+Paas- cloud environment for developers to build, test, and deploy apps
+Saas - Fully managed software applications accessed via a web browser or app.(eg.gmail.microsoft365)
 different organisation uses famous cloud(AWS,AZUR,GOOGLE) and some uses onprime cloud(open stack)
 youtube video(2hr)
 *Learned about ec2 instance
