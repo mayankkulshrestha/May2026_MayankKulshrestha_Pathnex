@@ -1,0 +1,20 @@
+cloud vs onprime
+different organisation uses famous cloud(AWS,AZUR,GOOGLE) and some uses onprime cloud(open stack)
+youtube video(2hr)
+*Learned about ec2 instance
+	flexible pricing
+	auto scaling
+	we can use different images 
+*Learned about IAM user
+	how to create iam user
+	how to give permissions,roles
+	support MFA for security
+*Learned about s3 storage(simple storage service)
+	Scalable object storage for storing and retrieving data.
+	Virtually unlimited, durable, and cost-effective storage.
+*Tag usefulness
+	Application - Used to group, manage, and track application resources.
+	Owner - should be applied to resources to identify the responsible individual or team
+	environment- Track spending at a detailed level for specific environments
+	
+working git commands(2hr)
