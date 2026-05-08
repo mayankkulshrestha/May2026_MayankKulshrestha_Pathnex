@@ -1,0 +1,43 @@
+08 May
+I have revised all the old lectures done so far
+*Linux*
+	how to create a linux machine through aws
+	how to create a file
+	how to create a directory
+	how to work/switch between different directory
+	how to list all the files,directory
+	how to create a hard link and soft link 
+	how to give permissions & how to change them
+	how to check all processes that are running 
+	how to make a zipfile
+	how to chk load average
+	
+*Learned about git*
+	It is versioning control system 
+	difference between git and github
+	how to initilize the git(git init)
+	how to add the files to staging area(add .)
+	how to chk the status(git status)
+	how to chk logs about the specific commit
+	how to work with branches
+	how to switch between the branches
+	how to merge the branches
+	how to create a branch and switch a branch at the same time
+
+*Learned about aws/cloud services*
+	what is Iaas,Paas,Saas
+	how to create a ec2 instance
+	how to chk the pricing and config of machines images
+	how to create a IAM user within a root user
+	how to give permissions to the user & what permissions 
+	what is s3 storage
+	Session Manager is used to access the server without the ssh keys
+	cloud trail is used to get a log(user name,time,command)
+	CloudWatch is used to monitor and alerts the system(cpu used 90% send alert)
+	AWS EKS is a kubernetes service by aws to manage the containers
+	Auto scaling is used increase/decrese the servers
+	AWS Lamda is used to make serverless server we only deploy our code and run the services(cron jobs)
+	AWS Shield is used to protect DDos attack protection(help to block malicious traffic)
+	AWS route 53 is a internet phonebook (IP changed to domain name)) 
+	
+	
