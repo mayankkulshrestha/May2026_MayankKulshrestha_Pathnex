@@ -1,0 +1,19 @@
+youtube video(3hr)
+hypervisor-1(bare metal)hardware/vmware
+hypervisor-2 (hosted hypervisor) hardware/os/vmware 
+Virtual machine
+virtual machines resources are being wasted
+why docker used(docker resolved the resources wastage)
+	creating a container
+learned about docker 
+docker hub( same like github)
+docker file
+	FROM 
+	WORKDIR
+	VOLUME
+	RUN
+	CMD
+	ENTRYPOINT
+docker image
+how to make container 
+docker swarn & k8s
