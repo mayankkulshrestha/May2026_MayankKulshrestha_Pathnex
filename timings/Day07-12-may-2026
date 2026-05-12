@@ -1,0 +1,33 @@
+youtube video(2hrs)
+learned about k8(4.5hr)
+k8s is a container management tool
+	orchestration
+	autoscaling
+	load balancing
+Learned about architecture of k8s(Master & Working node)
+Different components for Master/control plane
+	Kube API server - it works as a communication hub for k8 cluster 
+	Kube scheduler -it used for creation and management of pods
+					it also finds the best node if node is not selected for creation of pods
+	ETCD (etc distributed)-- it stored the metadata of cluster,pods,deployments
+	Cloud control manager- it manages cloud specific components such as load balancer,volumes
+	kube control manager- function is to manage current state should matches the desired state
+	Some of the controllers include:
+						ReplicaSet Controller (ensures the desired number of replicas for
+						pods are maintained).
+						Deployment Controller (manages deployments).
+						Job Controller (handles batch jobs).
+						Node Controller (handles node lifecycle)
+
+Different components for worker node- where actual application runs
+	kublet- it ensures that containers are running in pods defined by control plane
+			it also communicates with api to ensure proper config of nodes and pods
+	Kubeproxy-  it enables the Pod networking
+				Service traffic routing
+				Load balancing
+Container Runtime : it helps to pull the image,running the container
+pods : it is smallest unit in k8s
+
+LEARNED about CRON format 
+		* * * * * = min hours day month day of week
+		30 7 * * 1 = 7.30am ko monday ko 
