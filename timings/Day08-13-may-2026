@@ -1,0 +1,48 @@
+
+*Learned about git*
+It is versioning control system 
+	difference between git and github
+	how to initilize the git(git init)
+	how to add the files to staging area(add .)
+	how to chk the status(git status)
+	how to chk logs about the specific commit
+	
+*Learned about aws/cloud services*
+	
+	how to create a ec2 instance
+	how to chk the pricing and config of machines images
+	how to create a IAM user within a root user
+	how to give permissions to the user & what permissions 
+	what is s3 storage
+	Session Manager is used to access the server without the ssh keys
+	cloud trail is used to get a log(user name,time,command)
+	CloudWatch is used to monitor and alerts the system(cpu used 90% send alert)
+	AWS EKS is a kubernetes service by aws to manage the containers
+	Auto scaling is used increase/decrese the servers
+	AWS Lamda is used to make serverless server we only deploy our code and run the services(cron jobs)
+	AWS Shield is used to protect DDos attack protection(help to block malicious traffic)
+	AWS route 53 is a internet phonebook (IP changed to domain name))	
+
+*Learned about architecture of k8s(Master & Working node)*
+Different components for Master/control plane
+	Kube API server - it works as a communication hub for k8 cluster 
+	Kube scheduler -it used for creation and management of pods
+					it also finds the best node if node is not selected for creation of pods
+	ETCD (etc distributed)-- it stored the metadata of cluster,pods,deployments
+	Cloud control manager- it manages cloud specific components such as load balancer,volumes
+	kube control manager- function is to manage current state should matches the desired state
+
+AWS EKS
+in order to rid of master plane
+we leared about VPA/HPA(vertical/horizontal pod autoscaler)
+k8s version 1.35/every 4 month in aws it is 5month
+no direct upgrade is possible from one version to la
+standard policy/extended policy 
+cluster config- 
+networking- 2 subnets because of scaling(availaibilty zone)
+addons- vpc,kubeproxy,dns
+oberservabilty
+made nodes : desired,min and maximum
+
+
+
