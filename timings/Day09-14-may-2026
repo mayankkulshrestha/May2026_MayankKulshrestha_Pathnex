@@ -1,0 +1,30 @@
+youtube video(3hr)
+learned more about k8 architecture
+******The Data Plane (Worker Nodes)**********
+The Data Plane is responsible for actually executing the applications. Every worker node contains three essential components:
+Kubelet: This is the primary "agent" on the node. It is responsible for creating and maintaining Pods, ensuring they are always in a running state
+. If a Pod fails, the cubelet informs the control plane to trigger auto-healing
+.
+Container Runtime: This is the software responsible for actually running the container (e.g., containerd, CRI-O, or Docker shim)
+. Kubernetes supports any runtime that implements the standard container interface
+.
+Kube Proxy: This component handles networking, including assigning IP addresses and managing load balancing
+. It typically uses IP tables on the Linux host to route traffic between Pods and ensure that if a service is scaled, requests are distributed correctly
+.
+***The Control Plane (Master Node)*******
+The Control Plane acts as the "brain" or heart of the cluster, managing instructions and maintaining the desired state
+. Its components include:
+API Server: The core component that exposes the Kubernetes API to the external world
+. It receives all incoming requests and serves as the gateway for interacting with the cluster
+.
+Scheduler: When the API server receives a request to create a resource, the scheduler decides which worker node is best suited to host that resource based on availability
+.
+etcd: A key-value store that acts as the backing store for all cluster information
+. It keeps a record of every object and configuration in the cluster, making it essential for backup and restoration
+.
+Controller Manager: This manages various built-in controllers, such as the ReplicaSet
+. Its job is to ensure that the actual state of the cluster matches the desired state (e.g., if you request two Pods, the controller manager ensures two are running)
+.
+Cloud Controller Manager (CCM): An optional open-source utility used when running Kubernetes on cloud platforms like AWS, Azure, or GCP
+. It translates Kubernetes requests into the specific API calls required by the cloud provider to manage resources like load balancers or storage
+
