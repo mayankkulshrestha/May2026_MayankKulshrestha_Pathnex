@@ -1,0 +1,29 @@
+namespaces: it is used to divide cluster 
+default namespaces in k8s:
+default: this is a default namespaces 
+kube-system- it contains system components like dns,scheduler
+kube-public- accessible to all 
+kube-nodelease-used to kubernetes to chk whether nod is alive or not
+	it sends a signal am alive and Kubernetes stores this message as a lease.
+
+*** Services***
+				-pods ip can be change so service helps and provide fixed address
+*** Services types in k8***
+	Cluster IP: used to communicate with internal cluster pods to pods communicate
+	Node port: external(limited) it opens a port to a node (used for testing purpose)
+	Load balancer:This sends a external traffic to pods use in production
+		It sends traffic automatically to correct pods	
+			it works on Application and Transport layer
+	ExternalName: Maps a service to DNS name
+	
+
+7. Application	Provides network services to user applications.
+6. Presentation	Translates, encrypts, and compresses data.
+5. Session		Manages communication sessions between devices.
+4. Transport	Ensures reliable data delivery and error handling.,TCP/UDP
+3. Network		Handles routing and IP addressing between networks.
+2. Data Link	Transfers data between devices on the same network.
+1. Physical		Transmits raw bits through cables, signals, or hardware.
+			
+
+
