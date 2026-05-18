@@ -1,0 +1,62 @@
+namespaces: it is used to divide cluster 
+
+default namespaces in k8s:
+
+default: this is a default namespaces 
+kube-system- it contains system components like dns,scheduler
+kube-public- accessible to all 
+kube-nodelease-used to kubernetes to chk whether nod is alive or not
+	it sends a signal am alive and Kubernetes stores this message as a lease.
+
+*** Services***
+				-pods ip can be change so service helps and provide fixed address
+*** Services types in k8***
+	Cluster IP: used to communicate with internal cluster pods to pods communicate
+	Node port: external(limited) it opens a port to a node (used for testing purpose)
+	Load balancer:This sends a external traffic to pods use in production
+		It sends traffic automatically to correct pods	
+			it works on Application and Transport layer
+	ExternalName: Maps a service to DNS name
+	Headless service: In this cluster ip is not assigned and DNS goes directly to pods
+
+**Deployments**
+ A Deployment in Kubernetes manages a group of Pods and controls their lifecycle
+ 
+ A Deployment provides:
+	o Scaling (increase or decrease number of Pods)
+	o Rolling updates (update Pods without downtime)
+	o Rollback (revert to a previous version if needed)
+	
+ReplicaSets:
+o A ReplicaSet ensures that a specified number of pod replicas are running at
+any given time.
+
+Affinity: It helps control where pods are scheduled based on rules
+	types of affinity
+		Node affinity: On which node pod will be assigned
+		Pod affinity : Keeping pods in same no
+
+Helm is k8s package manager
+	Chart = collection of Kubernetes YAML files
+	
+Helm can manage:
+	Deployment
+	Service
+	Ingress
+	ConfigMap
+	Secrets
+
+Benefits of Helm:
+	Reduces manual YAML work
+	Easy installation
+	Reusable templates
+	Faster deployments
+	Supports CI/CD
+	Easy upgrades and rollback
+
+
+Things imp to connect to eks cluster
+AWS cli config(access key secret key)
+Kubectl install
+Security Group allow
+aws eks update -kubeconfig
