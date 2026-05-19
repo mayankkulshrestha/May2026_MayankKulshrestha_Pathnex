@@ -1,0 +1,52 @@
+19 May
+
+Helm is k8s package manager it is like yum,apt,brew
+yaml files stored in Helm
+
+Key components of helm
+
+1. Helm Client: it is basically a CLI tool to interact with k8s
+2. Helm chart: Basically it is collection of manifest/yaml files
+3. Helm Repo: it is location where helm charts are stored
+4. Helm realease: realse version after charts apply to k8 cluster
+	chart version
+	app version
+	
+Benefits of Helm:
+
+Simplifies deployment: Reduces manual YAML work
+Version control: Helm maintain the version of application we can rollback to old version
+Configuration Management: helm uses values files to manage the config of charts and we can customised according to our need
+Reusable and Shareable : we can download charts and create our own if needed
+
+Folder structure of helm charts
+
+mychart/
+
+│
+├── Chart.yaml- 
+├── values.yaml
+├── charts/
+├── templates/
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── ingress.yaml
+│   ├── configmap.yaml
+│   └── _helpers.tpl
+│
+└── .helmignore
+
+File/Folder	Purpose
+Chart.yaml		Chart metadata
+values.yaml		Configurations
+templates/		Kubernetes manifests
+charts/			Dependencies
+_helpers.tpl	Reusable helpers(use to change common inputs)
+				
+				App name
+				Labels
+				Full names
+				Common annotations
+				Image names
+				Chart names
+				
