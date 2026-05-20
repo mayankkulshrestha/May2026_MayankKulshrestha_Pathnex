@@ -1,0 +1,30 @@
+we learned about argocd
+why argocd is used
+in yaml files are stored in helm
+but in helm we have to change the things manually
+then comes to ARGO continuos deployement
+where if some chages are done in git in will automatically deploy in k8 cluster
+It uses gitrepo as a single source of truth
+
+Uses of ARGO CD
+	automates application deployement,rollback,& drift correction
+	provides both cli and GUI
+	
+	
+Main difference between jenkins and argocd
+
+jenkins works on push mechanism
+	devloper push the code chked in jenkins then deployed to k8 cluster 
+	security issue because jenkins is different software it will need credentials
+argocd works on pull mechanism
+	it will work in k8 cluster so no need of credentials
+	
+we also done practical in argocd 
+	we have seen health status: healthy,degraded,progessing,missing
+				 sync status : synced, out of sync,unknown
+				 
+GIT HUB action 
+
+For eg
+CI is basically a chef who makes a food
+cd is basically a waiter who takes food to customer
