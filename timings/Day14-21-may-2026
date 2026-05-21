@@ -1,0 +1,35 @@
+what is docker
+
+Docker file image reduction
+we can change the base image
+we can use dockerignore
+we can also use cached memory/layer caching
+multistage files	
+docker system prune: it will remove all dangling images,stopped container
+docker image prune: it will remove only images 
+
+**Docker network
+	Bridge: default network for standalone container	
+	Host: The container shares the host's networking
+	Overlay: Used for multi-host networking in Swarm mode
+	none: no network interface
+	
+There are some conditions 
+ intercontainer networking
+ we dont need to access payment gateway access by host ip
+	
+Terraform work as Iaac
+
+• Providers: The cloud platforms or services Terraform interacts with (e.g., AWS,
+Azure).
+• Resources: Define the components of your infrastructure (e.g., virtual machines,
+storage).
+• Modules: Reusable sets of Terraform configuration files.
+• State: Terraform tracks your infrastructure’s state to determine what changes are
+needed.
+
+terraform plan
+terraform validate
+terraform apply
+terraform destroy
+
