@@ -1,0 +1,48 @@
+22 May
+Terraform is Iaac
+ 
+version we used v.15.4
+
+files which are made on latest version cant run on old version
+
+tf switch- use to change the version without uninstalling and reinstalling
+
+state file -stored current infa info in state file
+state file.backup- ek previous state backup 
+if 10 we need to make 4 failed 6 sucess so 6 state file will be made
+we can also that plan by using terraform-out = filename
+
+We can made multiple instances/resources using for_each
+
+Feature		count			for_each
+Based on	number			key/value
+Naming		index (0,1,2)	custom name
+Best for	simple scaling	real production
+Deletion safe	❌ risky	✅ safe
+
+*terraform state show "awsinstance.myinstance"
+	it will show all the metadata like public ip 
+	
+state lock: if multiple user try to apply at same time it will apply lock
+ to unlock terraform force-unlock id 
+ 
+we also learned about backend in s3
+
+		terraform {
+  backend "s3" {
+    bucket         = "mybucket"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "terraform-lock"
+  }
+}	
+
+state files stored in s3bucket 
+Terraform import allows existing infrastructure resources 
+to be brought under Terraform state management without recreating them.
+
+*terraform import aws_instance.myec2 i-0abc123456*
+
+Also learned about workspace 
+
+
