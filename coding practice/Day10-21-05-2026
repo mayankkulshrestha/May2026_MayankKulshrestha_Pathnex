@@ -60,6 +60,16 @@ spec:
           ports:
             - containerPort: 80
 
+### Shell: Print date + uptime
+
+#!/bin/bash
+
+echo "Current Date:"
+date
+
+echo "System Uptime:"
+uptime
+
 
 # Parameterized Builds
 
