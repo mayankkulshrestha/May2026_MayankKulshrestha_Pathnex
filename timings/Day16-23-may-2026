@@ -1,0 +1,47 @@
+
+Terraform it is a Iac open platform
+
+Terraform components
+	terraform init
+	terraform fmt
+	terraform plan
+	terraform apply
+	terraform destroy
+	
+works with all famous cloud
+key concepts :
+			providers: aws,gcp,azur
+			resources: kind of infra we need(instance,bucket)
+			modules: reusable sets of config file 
+			state:records the current condition of infra
+			
+	type of modules:
+			root module
+			child module
+
+learned about state file and state file backup
+learned about terraform refresh
+learned about terraform import
+
+learned about backend file (work with s3+dynamodb)
+	dynamodb: it helps to put a lock in to a state file
+
+Learned about terraform lifecycle
+	Create_before_destroy
+	prevent_destroy
+	ignore_changes
+	replace_triggered_by
+
+terraform workspace used to have different state file for different env with same terraform code
+create new workspace and can switch workspace 
+
+Ansible is tool for config files
+it works on push mechanism 
+it a agentless not same like puppet and chef
+we can access thorugh ssh mechanism and windowsrm in windows
+
+Basic components of ansible
+			playbook
+			inventory
+
+
