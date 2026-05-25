@@ -1,0 +1,57 @@
+Ansible is tool for config files
+it works on push mechanism 
+it a agentless not same like puppet and chef
+we can access thorugh ssh mechanism and windowsrm in windows
+
+Basic components of ansible
+			playbook
+			inventory
+			
+			
+It is better to build a virtual env
+
+
+CI/CD is methadalogy 
+Continuous integration--Continuous Integration is a DevOps practice where developers frequently 
+merge code into a shared repository and automated build/tests are triggered to detect issues early
+CI= continuous build + cont test
+Continuous delivery-- ready for deployment(approval needed)
+deployment-- automatically deployment
+
+key components
+	pipeline
+	jenkins files
+	job
+	node -- jenkins run on a machines thats are node
+	executer-- these are process that run on these nodes
+
+Code → Build → Test → Release → Deploy → Monitor
+
+
+pipeline depends on project to project 
+	project type
+	approval team
+
+In coding
+
+we do staging of every work 
+
+Pipeline
+   ↓
+Agent
+   ↓
+Stages
+   ↓
+Stage
+   ↓
+Steps
+   ↓
+Script / Commands
+   ↓
+Build
+   ↓
+Test
+   ↓
+Deploy
+   ↓
+Post Actions
