@@ -1,0 +1,50 @@
+
+APM- application perfomance monitoring
+
+ELK is open source tool designed for searching,analysing,visualizing large data
+
+we use elk for logging,observability & log analytics
+
+ELK-- elasticsearch logstash kibana
+
+we can use elk in place of datadog and grefana 
+because elk shows logs without going to cli
+
+Logs- 
+metrices- 
+Traces
+
+Elastic search:- used to store,search, analyse logs and data
+	it is also parcing of data/ dividing the data with proper header 
+	
+logs : data collection and transformation pipeline
+ 
+kibana: visualzation tool 
+
+data flow:----
+logs--logstash--elasticsearch--kubana
+
+Concept of shards and replicas
+actual storage done in shards and replicas are made for backup 
+
+shards is basically dividing a data in to smaller group 
+	for eg disk space in computer
+
+node A replica will be kept in another node 
+
+total shards = P*(r+1)
+	p= 5 , replica= 1 total shards = 8
+
+
+planning guid also for shared
+
+		p = total data size/ target shard size/
+		p = 500gb/25gb 20primary shards
+		
+ILM- index lifecycle management - depend how old logs are needed 
+3 cycles
+Hot phase
+warm phase 
+cold phase 
+frozen 
+delete
