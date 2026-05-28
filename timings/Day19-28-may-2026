@@ -1,0 +1,35 @@
+
+As we are moving to microservices 
+for eg in food delivery app
+	order created
+	order placed
+	order accepted
+	order preparing
+	order dispatch
+	delivery partner assigned
+	delivery done
+	
+all this events will be created in the user app,
+	restruant app & delivery partner app & zomoato will also have
+
+so to make a communication b/w these events is tough
+
+Kafka it is open source distributed event steaming platform
+	collects all the events and sends to multiple service
+
+Key components of kafka
+
+PRODUCER: sends data
+CONSUMER: recieve data
+BROKER: Kafka brokers are servers that store data and serve client requests.
+		multiple brokers are there
+		replicas are made
+		
+TOPIC: it is basically ka data,(payment)
+PARTITION: which divide large data in to partitions
+zookeeper: it is like a coordinator for syncronization & configuration
+kraft: kraft is in built now managing things
+
+kafka connect- it is framework for integrating kafka with external system like Databases,filesystem
+kakfa streams - Kafka Streams is a library which process the livedata in realtime. 
+
