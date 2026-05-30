@@ -1,0 +1,58 @@
+SRE-site reliability engineer it is discipline that applies software engineering principles to IT operations.
+	
+The main goals are to create scalable and highly reliable software systems.
+
+Key components of SRE
+
+ SLO (Service Level Objective): A target level of reliability (e.g., 99.9% uptime) What you want to achieve
+ SLI (Service Level Indicator): A metric used to measure the reliability (e.g., requestsuccess rate) What you measure
+ SLA (Service Level Agreement): A formalized agreement often including penalties if targets aren’t met 
+ 
+ Incident Management: Detecting, responding to, and recovering from outages and service disruptions
+						Blameless Postmortem / RCA
+ 
+ Monitoring and Observability: Tools to track system health, performance, and user experience
+ 
+ Automation and Elimination of Toil: 
+	Toil: Manual, repetitive work that scales with system growth
+	SREs aim to automate tasks like deployments, monitoring,
+ 
+ Capacity Planning and Performance: Forecasting infrastructure needs to handle future growth
+ 
+ Change Management : Safely deploying changes to production systems
+  
+ Reliability Engineering and Chaos Testing : Designing systems that gracefully handle failures
+ 
+ Tools Commonly Used by SREs
+• Monitoring: Prometheus, Grafana, Datadog, New Relic
+• Logging: ELK Stack, Fluentd, Loki
+• Automation: Terraform, Ansible, Chef, Puppet
+• CI/CD: Jenkins, GitLab CI, ArgoCD
+• Incident Response: PagerDuty, Opsgenie, Slack integrations-- sends the alert on mobile
+  
+ Error Budgets : 100% - SLO
+ 
+ 
+1.What: What is the issue?
+	o Identify the problem or incident, whether it's a system failure, service
+	degradation, or performance bottleneck.
+
+2. Why: Why did this happen?
+	o Root cause analysis to understand why the issue occurred (e.g., code bug,
+	misconfiguration, or external factor).
+
+3. Where: Where is it happening?
+	o Identify which system, service, or component is affected (e.g., specific servers,
+	regions, or services).
+	
+4. When: When did it happen?
+	o Time of occurrence helps in determining patterns, establishing timelines, and
+	correlating with other incidents.
+	
+5. Who: Who is affected or responsible?
+ 
+Hard Freeze: Complete freeze on all changes to the system
+Cold Freeze: A partial freeze where essential changes are allowed, (e.g., security patches)
+
+ Blue-Green Deployment
+ Canary Deployment
