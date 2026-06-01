@@ -1,0 +1,139 @@
+## 1️⃣ Terraform — Create EC2 (any instance type)
+#AWS Default VPC
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+resource "aws_instance" "ec2" {
+  ami           = "ami-xxxxxxxx"
+  instance_type = "c5.xlarge"
+}
+
+
+#####Ansible — Install Nginx & Deploy HTML File
+
+---
+- name: Install Nginx & Deploy HTML File
+  hosts: all
+  become: yes
+
+tasks:
+
+   - name: Install Nginx
+     package:
+        name: nginx
+        state: present
+
+- name: Deploy HTML File
+      copy:
+        dest: /usr/share/nginx/html/index.html
+        content: |
+          <html>
+          <head><title>My Website</title></head>
+          <body>
+            <h1>Hello from Ansible!</h1>
+          </body>
+          </html>
+
+
+####Kubernetes — Create Deployment + Service
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+
+  template:
+    metadata:
+      labels:
+        app: nginx
+
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+
+spec:
+  selector:
+    app: nginx
+
+  ports:
+  - port: 80
+    targetPort: 80
+
+  type: NodePort
+
+
+###Shell — Print CPU, Memory, Disk
+
+
+
+#!/bin/bash
+
+echo "===== SYSTEM INFO ====="
+
+echo ""
+echo "CPU Usage:"
+top -bn1 | grep "Cpu(s)"
+
+echo ""
+echo "Memory Usage:"
+free -h
+
+echo ""
+echo "Disk Usage:"
+df -h
+
+## 🔹 Jenkins Pipeline — Scheduled Build
+You will learn how to **schedule a Jenkins pipeline using cron**.
+
+pipeline {
+    agent any
+    environment {
+        INSTITUTE_NAME = "Pathnex"
+    }
+    triggers {
+        cron('H 2 * * *') // every day at 2 AM
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/Pathnex/sample-java-app.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
+
+## 🔹 GitLab CI — Scheduled Pipeline
+You will learn how to **schedule GitLab CI pipelines via cron**.
+
+stages:
+  - build
+
+build:
+  stage: build
+  image: maven:3.8.1-jdk-17
+  script:
+    - git clone https://github.com/Pathnex/sample-java-app.git
+    - cd sample-java-app
+    - mvn clean package
